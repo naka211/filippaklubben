@@ -28,6 +28,7 @@ $tmpl = JURI::base()."templates/filip/";
 	
 				<!-- Carousel items -->
 				<div class="carousel-inner">
+					<?php /*?>
 					<div class="active item">
 						<div class="slide-element">
 							<img src="<?php echo $tmpl;?>img/slide-bg01.jpg">
@@ -61,6 +62,8 @@ $tmpl = JURI::base()."templates/filip/";
 							</div><!--my_caption_slider-->
 						</div> <!-- /.slide-element -->
 					</div> <!-- /.item --> 
+					<?php */?>
+					{module Banner articles}
 				</div> <!-- /.carousel-inner -->
 				
 				<!-- slider nav -->
@@ -75,25 +78,8 @@ $tmpl = JURI::base()."templates/filip/";
 	<div class="container-full">
 		<div class="shadow">
 			<div class="container">  
-				<div class="row">  
-					<div class="col-xs-4">
-						<center><a class="w_picture" href="#"><img class="img-circle" src="<?php echo $tmpl;?>img/circle01.jpg" alt=""></a></center>
-						<h4 class="text-center service_h4"><a href="#">MUSIK</a></h4> 
-						<p class="text-center service_p"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula </p>
-						<center><a href="template.php" class="btn_more">Læs mere</a></center>
-					</div>
-					<div class="col-xs-4">
-						<center><a class="w_picture" href="#"><img class="img-circle" src="<?php echo $tmpl;?>img/circle02.jpg" alt=""></a></center>
-						<h4 class="text-center service_h4"><a href="#">FOTO</a></h4> 
-						<p class="text-center service_p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula </p>
-						<center><a href="template.php" class="btn_more">Læs mere</a></center>
-					</div>
-					<div class="col-xs-4">
-						<center><a class="w_picture" href="#"><img class="img-circle" src="<?php echo $tmpl;?>img/circle03.jpg" alt=""></a></center>
-						<h4 class="text-center service_h4"><a href="#">HÅNDARBEJDE</a></h4> 
-						<p class="text-center service_p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula </p>
-						<center><a href="template.php" class="btn_more">Læs mere</a></center>
-					</div>
+				<div class="row"> 
+					{module Circle articles} 
 				</div>
 			</div> <!-- /.container -->
 		</div> <!-- /.shadow -->
@@ -103,10 +89,7 @@ $tmpl = JURI::base()."templates/filip/";
 	<section id="udfordre">
 	<div class="udfordre"> 
 		<div class="container">
-			<h2> Generelle oplysninger</h2>
-			<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. </p>
-			<p> Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. </p>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+			{article 1}{introtext}{/article}
 	
 		</div> <!--/.container-->		 
 	</div> <!-- /.udfordre -->
