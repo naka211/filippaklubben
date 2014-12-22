@@ -4,7 +4,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">  </button>
-        <h4 class="modal-title title-pp">FIRMA LOG IND ELLER OPRET KONTO</h4>         
+        <h4 class="modal-title title-pp">FORÆLDRE LOGIN ELLER OPRET KONTO</h4>         
       </div>
       <div class="modal-body w_popup_login"> 
             <div class="col-sx-6 col-md-6  pp_left">

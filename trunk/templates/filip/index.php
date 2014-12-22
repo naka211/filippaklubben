@@ -63,10 +63,10 @@ $user = JUser::getInstance($user->id);
 				<section id="headnev" class="navbar topnavbar">		
 					<div class="container"> 
 						<div class="top_header">
-							<h3 class="col-sm-5 pull-left h3_logo"><a class="logo" href=""><img src="<?php echo $tmpl;?>img/logo.png"></a></h3> 
+							<h3 class="col-sm-6 pull-left h3_logo"><a class="logo" href=""><img src="<?php echo $tmpl;?>img/logo.png"></a></h3> 
 							<h3 class="col-sm-2 pull-right h3_logo_2"><a href="#" class="logo_right"> <img src="<?php echo $tmpl;?>img/logo_right.jpg"> </a>  </h3>					
 							
-							<div class="col-sm-5 right_top">
+							<div class="col-sm-4 right_top">
 								<div class="pull-left navbar-header">
 									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 										<span class="sr-only">Toggle navigation</span>
@@ -195,7 +195,7 @@ $user = JUser::getInstance($user->id);
 				<div class="modal-content">
 				  <div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">  </button>
-					<h4 class="modal-title title-pp">FIRMA LOG IND ELLER OPRET KONTO</h4>         
+					<h4 class="modal-title title-pp">FORÆLDRE LOGIN ELLER OPRET KONTO</h4>         
 				  </div>
 				  <div class="modal-body w_popup_login"> 
 						<div class="col-sx-6 col-md-6  pp_left">
