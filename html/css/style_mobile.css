@@ -57,7 +57,8 @@
 	 		
   	.w_social_icons  { text-align: center;  max-width: 220px;padding-right: 0;}
 	.copyright p   { 	line-height: 20px;	padding-top: 10px;}
-	}
+	#header .navbar-nav a  { }
+	.navbar_top { border: 1px solid #888;margin: 10px;}
 	 
 }
 

@@ -35,7 +35,6 @@
                     <div class="form-group">
                         <input type="text" placeholder="Telefon *" class="form-control">
                     </div>
-                    <h5>LOG-IND INFORMATION</h5>
                     <div class="form-group">
                         <input type="password" placeholder="Kodeord (skal være min 4 tegn) *" class="form-control">
                     </div>

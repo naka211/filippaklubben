@@ -22,7 +22,7 @@
                 
                 <div class="col-sm-9 form_reg">
                     <h3>Min konto</h3>
-                     <div class="form-group">
+                    <div class="form-group">
                         <input type="text" value="rene@graphit.dk" class="form-control">
                     </div>
                     <div class="form-group">
@@ -34,7 +34,6 @@
                     <div class="form-group">
                         <input type="text" value="22 22 22 22" class="form-control">
                     </div>
-                    <h5>LOG-IND INFORMATION</h5>
                     <div class="form-group">
                         <input type="password" placeholder="Kodeord (skal være min 4 tegn) *" class="form-control">
                     </div>
@@ -42,7 +41,7 @@
                         <input type="password" placeholder="Bekræft kodeord *" class="form-control">
                     </div>
                     <p><i>Felter markeret med * skal udfyldes</i> </p>
-                     <a class="btn btn_send">TILMELD NU</a>
+                     <a class="btn btn_send">GEM</a>
                 </div>                  
             </div><!-- /.each_row -->
         </div> <!-- /.container -->
