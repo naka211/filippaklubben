@@ -64,7 +64,7 @@ $user = JUser::getInstance($user->id);
 					<div class="container"> 
 						<div class="top_header">
 							<h3 class="col-sm-6 pull-left h3_logo"><a class="logo" href=""><img src="<?php echo $tmpl;?>img/logo.png"></a></h3> 
-							<h3 class="col-sm-2 pull-right h3_logo_2"><a href="#" class="logo_right"> <img src="<?php echo $tmpl;?>img/logo_right.jpg"> </a>  </h3>					
+							<h3 class="col-sm-2 pull-right h3_logo_2"><a href="http://www.frederiksberg.dk/" target="_blank" class="logo_right"> <img src="<?php echo $tmpl;?>img/logo_right.jpg"> </a>  </h3>					
 							
 							<div class="col-sm-4 right_top">
 								<div class="pull-left navbar-header">
