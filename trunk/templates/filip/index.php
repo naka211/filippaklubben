@@ -7,27 +7,32 @@ $user = JUser::getInstance($user->id);
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 	<head>
-		<meta charset="UTF-8">
 		<script src="<?php echo $tmpl;?>js/jquery-1.9.1.min.js"></script>
+		<meta charset="UTF-8">
 		<jdoc:include type="head" />
-	
+		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery.min.js']); ?>
+		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery-noconflict.js']); ?>
+		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery-migrate.min.js']); ?>
+		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery-migrate.min.js']); ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo $tmpl;?>css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $tmpl;?>css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $tmpl;?>css/font-awesome.min.css">
-		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-		<link href="<?php echo $tmpl;?>css/jquery.smartmenus.bootstrap.css" rel="stylesheet">  
+		<link href="<?php echo $tmpl;?>css/jquery.smartmenus.bootstrap.css" rel="stylesheet"> 
+		<link href="<?php echo $tmpl;?>css/ekko-lightbox.css" rel="stylesheet"> 
 		<link rel="stylesheet" type="text/css" href="<?php echo $tmpl;?>css/style.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $tmpl;?>css/style_mobile.css" />
 		
 		<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="font/stylesheet.css" type="text/css" charset="utf-8" />
+		<link rel="stylesheet" href="<?php echo $tmpl;?>font/stylesheet.css" type="text/css" charset="utf-8" />
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.5; user-scalable=1;" />    
 	
+		
 		<script src="<?php echo $tmpl;?>js/bootstrap.min.js"></script>
+		<script src="<?php echo $tmpl;?>js/custom.js"></script>
 		<script src="<?php echo $tmpl;?>js/parallax.js"></script>
 		<script src="<?php echo $tmpl;?>js/jquery.mixitup.min.js"></script>
+		<script src="<?php echo $tmpl;?>js/ekko-lightbox.js"></script>
 		
-		<script src="<?php echo $tmpl;?>js/custom.js"></script>
 		<script type="text/javascript">
 		  WebFontConfig = {
 			google: { families: [ 'Fjalla+One::latin' ] }
@@ -43,13 +48,63 @@ $user = JUser::getInstance($user->id);
 		  })(); 
 		 </script>
 		  <!-- Add fancyBox --> 
-		  <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-		  <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+		  <script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+		  <script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/helpers/jquery.fancybox-media.js"></script>
 		  <script type="text/javascript">
 			$(document).ready(function() {
-			  $(".fancybox").fancybox();  
+			  jQuery(".fancybox").fancybox();  
 			}); 
-		  </script>	
+		  </script>
+		  <script type="text/javascript">
+            $(document).ready(function ($) {
+                // delegate calls to data-toggle="lightbox"
+                $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
+                    event.preventDefault();
+                    return $(this).ekkoLightbox({
+                        onShown: function() {
+                            if (window.console) {
+                                return console.log('Checking our the events huh?');
+                            }
+                        },
+						onNavigate: function(direction, itemIndex) {
+                            if (window.console) {
+                                return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+                            }
+						}
+                    });
+                });
+
+                //Programatically call
+                $('#open-youtube').click(function (e) {
+                    e.preventDefault();
+                    $(this).ekkoLightbox();
+                });
+
+				// navigateTo
+                $(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
+                    event.preventDefault();
+                    return $(this).ekkoLightbox({
+                        onShown: function() {
+
+							var a = this.modal_content.find('.modal-footer a');
+							if(a.length > 0) {
+
+								a.click(function(e) {
+
+									e.preventDefault();
+									this.navigateTo(2);
+
+								}.bind(this));
+
+							}
+
+                        }
+                    });
+                });
+
+
+            });
+        </script>
 	
 		<!-- SmartMenus jQuery plugin -->
 		<script type="text/javascript" src="<?php echo $tmpl;?>js/jquery.smartmenus.js"></script>  
@@ -94,7 +149,8 @@ $user = JUser::getInstance($user->id);
 						   	<div class="navbar" role="navigation"> 
 								<div class="navbar-collapse collapse navbar_top">
 								  <!-- Left nav -->
-								  <ul class="nav navbar-nav">
+								  {module Main Menu}
+								  <!--<ul class="nav navbar-nav">
 										<li><a href="index.php"><span class="glyphicon glyphicon-home"></span></a></li>
 											<li><a href="#">Om Filippa </a>
 												 <ul class="dropdown-menu">
@@ -159,7 +215,7 @@ $user = JUser::getInstance($user->id);
 											  </ul>
 											</li> 
 											<li><a href="kontakt.php">Kontakt </a> </li> 	            
-									  </ul> 
+									  </ul> -->
 								</div><!--/.nav-collapse -->
 							  </div>  
 						  <!-- End   navbar -->  

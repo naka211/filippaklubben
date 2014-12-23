@@ -28,41 +28,6 @@ $tmpl = JURI::base()."templates/filip/";
 	
 				<!-- Carousel items -->
 				<div class="carousel-inner">
-					<?php /*?>
-					<div class="active item">
-						<div class="slide-element">
-							<img src="<?php echo $tmpl;?>img/slide-bg01.jpg">
-							<div class="container carousel-caption">
-								<div class="iframe_video_slide"><img src="<?php echo $tmpl;?>img/img_video_demo.jpg"></div>
-								<h1>Alle brugere er velkommen på Soundbook.dk</h1>
-								<p>For dig, som bare er nysgerrig, er der stadig masser af underholdning. <br>
-								Du vil kunne lytte, se, og ikke mindst stemme og kommentere på alle lydfiler, videoer og se kunstnernes billeder. Yep, Soundbook samarbejder med et top professionelt musikstudie i indre København. Vi vil løbende holde konkurrencer, hvor de mest sete videoer/lydfiler på Soundbook, kan få chancen for at vinde en dag i studiet!</p> 
-							</div><!--my_caption_slider-->
-						</div> <!-- /.slide-element -->
-					</div> <!--/.active /.item -->
-	
-					<div class="item">
-						<div class="slide-element">
-							<img src="<?php echo $tmpl;?>img/slide-bg02.jpg">
-							<div class="container carousel-caption">
-							<div class="iframe_video_slide"><img src="<?php echo $tmpl;?>img/img_video_demo.jpg"></div>
-								<h1>Lorem ipsum dolor sit amet</h1>
-								<p> Nullam mollis. Ut justo. Suspendisse potenti. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. </p>		
-							</div><!--my_caption_slider-->			 
-						</div> <!-- /.slide-element -->
-					</div> <!-- /.item --> 
-	
-					<div class="item">
-						<div class="slide-element">
-							<img src="<?php echo $tmpl;?>img/slide-bg03.jpg">
-							<div class="container carousel-caption">
-								<div class="iframe_video_slide"><img src="<?php echo $tmpl;?>img/img_video_demo.jpg"></div>
-								<h1>Lorem ipsum dolor sit amet</h1>
-								<p> Nullam mollis. Ut justo. Suspendisse potenti. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. </p>					
-							</div><!--my_caption_slider-->
-						</div> <!-- /.slide-element -->
-					</div> <!-- /.item --> 
-					<?php */?>
 					{module Banner articles}
 				</div> <!-- /.carousel-inner -->
 				

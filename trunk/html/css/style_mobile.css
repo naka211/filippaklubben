@@ -2,7 +2,9 @@
 
 	@media screen and (max-width: 1280px) and (max-width: 1600px) { }
 
-	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {	}
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+		
+	}
 
 @media screen and (device-width: 640px) and (device-height: 360px) and (orientation: landscape) { }
 
@@ -49,7 +51,7 @@
 	.w_social_icons {   margin: 0 auto;float: none;}
 	#slider .slide-element h1 { font-size: 1em;}
 	#slider .slide-element p {font-size: 0.6em; }
-	.carousel-caption {padding-top: 2em;} 
+	.carousel-caption {padding-top: 2em; left: 0;} 
 	#slider .slide-element img { max-width: 40%; max-height: 250px;	}
 	#slider .carousel-control {margin-top: 100px;} 	 
 	#slider .slide-element h1 { font-size: 0.8em; padding: 0.3em 0.5em; }

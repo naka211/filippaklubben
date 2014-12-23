@@ -1,69 +1,77 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
+  jQuery(".iframe_video_slide").click(function(){
+    jQuery("#myModal").modal('show');
+  });
+
+  jQuery('.myCarousel_banner').carousel({
+      pause: true,
+      interval: false
+  });
     
-  $(window).bind('scroll', function(e) {
+  jQuery(window).bind('scroll', function(e) {
     scrollingfn();
   });
 
-  $('a.header').click(function() {
-    $('html, body').animate({ scrollTop:$('#header').offset().top - '60'}, 1000,
+  jQuery('a.header').click(function() {
+    jQuery('html, body').animate({ scrollTop:jQuery('#header').offset().top - '60'}, 1000,
       function() {
         scrollingfn();
       });
     return false;
   });
 
-  $('a.service').click(function() {
-    $('html, body').animate({ scrollTop:$('#service').offset().top - '60'}, 1000,
+  jQuery('a.service').click(function() {
+    jQuery('html, body').animate({ scrollTop:jQuery('#service').offset().top - '60'}, 1000,
       function() {
         scrollingfn();
       });
     return false;
   });
   
-  $('a.portfolio').click(function() {
-    $('html, body').animate({ scrollTop:$('#portfolio').offset().top - '60'}, 1000,
+  jQuery('a.portfolio').click(function() {
+    jQuery('html, body').animate({ scrollTop:jQuery('#portfolio').offset().top - '60'}, 1000,
       function() {
         scrollingfn();
       });
     return false;
   });
 
-  $('a.pricing').click(function() {
-    $('html, body').animate({ scrollTop:$('#pricing').offset().top - '60'}, 1000,
+  jQuery('a.pricing').click(function() {
+    jQuery('html, body').animate({ scrollTop:jQuery('#pricing').offset().top - '60'}, 1000,
       function() {
         scrollingfn();
       });
     return false;
   });
   
-  $('a.aboutus').click(function() {
-    $('html, body').animate({ scrollTop:$('#aboutus').offset().top - '60'}, 1000,
+  jQuery('a.aboutus').click(function() {
+    jQuery('html, body').animate({ scrollTop:jQuery('#aboutus').offset().top - '60'}, 1000,
       function() {
         scrollingfn();
       });
     return false;
   });
   
-$('a.team').click(function() {
-    $('html, body').animate({ scrollTop:$('#team').offset().top - '60'}, 1000,
+jQuery('a.team').click(function() {
+    jQuery('html, body').animate({ scrollTop:jQuery('#team').offset().top - '60'}, 1000,
       function() {
         scrollingfn();
       });
     return false;
   });
 
- $(window).scroll(function() {
-      if ($(this).scrollTop() > 400) {
-          $('#scroller2').fadeIn();
+ jQuery(window).scroll(function() {
+      if (jQuery(this).scrollTop() > 400) {
+          jQuery('#scroller2').fadeIn();
       } else {
-          $('#scroller2').fadeOut();
+          jQuery('#scroller2').fadeOut();
       }
   });
 
 });
 
 function scrollingfn() {
-  var scrollPosition = $(window).scrollTop();
+  var scrollPosition = jQuery(window).scrollTop();
 }
 
 // Script for top Navigation Menu
@@ -80,8 +88,8 @@ function scrollingfn() {
 
 
 // Script for Mixitup Plugin
-$(function(){
-    $('#Grid').mixitup();
+jQuery(function(){
+    jQuery('#Grid').mixitup();
   });
 
 
