@@ -19,7 +19,9 @@
 						<div class="slide-element">
 							<img src="img/slide-bg01.jpg">
 							<div class="container carousel-caption">
-								<div class="iframe_video_slide"><img src="img/img_video_demo.jpg"></div>
+								<div class="iframe_video_slide">
+									<a href="//www.youtube.com/embed/IQfses7giW8" data-toggle="lightbox"><img src="img/img_video_demo.jpg"></a>
+								</div>
 								<h1>Alle brugere er velkommen på Soundbook.dk</h1>
 								<p>For dig, som bare er nysgerrig, er der stadig masser af underholdning. <br>
 								Du vil kunne lytte, se, og ikke mindst stemme og kommentere på alle lydfiler, videoer og se kunstnernes billeder. Yep, Soundbook samarbejder med et top professionelt musikstudie i indre København. Vi vil løbende holde konkurrencer, hvor de mest sete videoer/lydfiler på Soundbook, kan få chancen for at vinde en dag i studiet!</p> 
@@ -31,7 +33,9 @@
 						<div class="slide-element">
 							<img src="img/slide-bg02.jpg">
 							<div class="container carousel-caption">
-							<div class="iframe_video_slide"><img src="img/img_video_demo.jpg"></div>
+							<div class="iframe_video_slide">
+								<a href="//www.youtube.com/embed/IQfses7giW8" data-toggle="lightbox"><img src="img/img_video_demo.jpg"></a>
+							</div>
 								<h1>Lorem ipsum dolor sit amet</h1>
 								<p> Nullam mollis. Ut justo. Suspendisse potenti. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. </p>		
 							</div><!--my_caption_slider-->			 
@@ -42,7 +46,9 @@
 						<div class="slide-element">
 							<img src="img/slide-bg03.jpg">
 							<div class="container carousel-caption">
-								<div class="iframe_video_slide"><img src="img/img_video_demo.jpg"></div>
+								<div class="iframe_video_slide">
+									<a href="//www.youtube.com/embed/IQfses7giW8" data-toggle="lightbox"><img src="img/img_video_demo.jpg"></a>
+								</div>
 								<h1>Lorem ipsum dolor sit amet</h1>
 								<p> Nullam mollis. Ut justo. Suspendisse potenti. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. </p>					
 							</div><!--my_caption_slider-->

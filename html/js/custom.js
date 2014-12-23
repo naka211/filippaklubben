@@ -1,4 +1,12 @@
 $(document).ready(function() {
+  $(".iframe_video_slide").click(function(){
+    $("#myModal").modal('show');
+  });
+
+  $('.myCarousel_banner').carousel({
+      pause: true,
+      interval: false
+  });
     
   $(window).bind('scroll', function(e) {
     scrollingfn();

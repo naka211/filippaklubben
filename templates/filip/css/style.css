@@ -230,7 +230,7 @@ section p {font-size: 14px;}
 
 #slider .readmore a:hover {	background-color: #e96269;
 	-webkit-transition: background-color .2s;	-moz-transition: background-color .2s;	-o-transition: background-color .2s;	-ms-transition: background-color .2s;	transition: background-color .2s;}
- .carousel-caption { top:0; padding-top: 90px; }
+ .carousel-caption { top:0; padding-top: 90px; left: 5%;}
 
 /*---------------        udfordre     ---------------*/
  
