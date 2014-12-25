@@ -21,14 +21,6 @@ $images  = json_decode($this->item->images);
 		</div><!--w_breadcrumb-->
 		<div class="each_row">
 			<div class="col-sm-3 w_nav_left"> 
-				<!--<ul class="nav_left">
-					<li class="active"><a href="#">Vestibulum auctor dapibus</a></li>
-					<li><a href="#">Nunc dignissim risus id</a></li>
-					<li><a href="#">Cras ornare tristique</a></li> 
-					<li><a href="#">Vivamus vestibulum nulla</a></li> 
-					<li><a href="#">Praesent placerat risus quis</a></li> 
-					<li><a href="#">Fusce pellentesque suscipit</a></li> 
-				</ul>-->
 				{module Left Menu}
 			</div>
 			

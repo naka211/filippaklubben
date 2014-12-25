@@ -12,7 +12,7 @@ JHtml::_('behavior.formvalidation');
 ?>
 <style>
 .invalid{
-	border: 2px solid red;
+	border: 1px solid red;
 }
 </style>
 <section class="temp"> 
