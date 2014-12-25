@@ -9,9 +9,20 @@
 
 defined('_JEXEC') or die;
 // Note. It is important to remove spaces between elements.
+$menu = JFactory::getApplication()->getMenu();
+$current_menu = $menu->getActive()->id;
+
+$a = 0;
+foreach($list as $item){
+	if($item->parent_id != $current_menu){
+		unset($list[$a]);
+	}
+	$a++;
+}
+$list = array_values($list);
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-<ul class="nav navbar-nav">
+<ul class="nav_left">
 <?php
 foreach ($list as $i => &$item)
 { 
@@ -80,21 +91,7 @@ foreach ($list as $i => &$item)
 		endswitch;
 	}
 
-	// The next item is deeper.
-	if ($item->deeper)
-	{
-		echo '<ul class="dropdown-menu">';
-	}
-	elseif ($item->shallower)
-	{
-		// The next item is shallower.
-		echo '</li>';
-		echo str_repeat('</ul></li>', $item->level_diff);
-	}
-	else
-	{
-		// The next item is on the same level.
-		echo '</li>';
-	}
+	echo '</li>';
+
 }
 ?></ul>

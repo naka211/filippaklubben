@@ -162,17 +162,18 @@ class ContactControllerContact extends JControllerForm
 			$name    = $data['contact_name'];
 			$email   = JStringPunycode::emailToPunycode($data['contact_email']);
 			$subject = $data['contact_subject'];
+			$phone = $data['contact_phone'];
 			$body    = $data['contact_message'];
 
 			// Prepare email body
 			$prefix = JText::sprintf('COM_CONTACT_ENQUIRY_TEXT', JUri::base());
-			$body	= $prefix . "\n" . $name . ' <' . $email . '>' . "\r\n\r\n" . stripslashes($body);
+			$body	= $name . ' <' . $email . '>' . $phone ."\r\n\r\n" . stripslashes($body);
 
 			$mail = JFactory::getMailer();
 			$mail->addRecipient($contact->email_to);
 			$mail->addReplyTo(array($email, $name));
 			$mail->setSender(array($mailfrom, $fromname));
-			$mail->setSubject($sitename . ': ' . $subject);
+			$mail->setSubject($sitename);
 			$mail->setBody($body);
 			$sent = $mail->Send();
 
