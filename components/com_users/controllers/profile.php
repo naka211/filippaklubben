@@ -94,6 +94,22 @@ class UsersControllerProfile extends UsersController
 
 		// Get the user data.
 		$data = $app->input->post->get('jform', array(), 'array');
+		
+		//T.Trung
+		if(!$data){
+			$data = array(
+				'email1' => JRequest::getVar('email'),
+				'email2' => JRequest::getVar('email'),
+				'username' => JRequest::getVar('email'),
+				'name' => JRequest::getVar('firstname').' '.JRequest::getVar('lastname'),
+				'firstname' => JRequest::getVar('firstname'),
+				'lastname' => JRequest::getVar('lastname'),
+				'phone' => JRequest::getVar('phone'),
+				'password1' => JRequest::getVar('password1'),
+				'password2' => JRequest::getVar('password2')
+			);
+		}
+		//T.Trung end
 
 		// Force the ID to this user.
 		$data['id'] = $userId;
@@ -107,7 +123,7 @@ class UsersControllerProfile extends UsersController
 		}
 
 		// Validate the posted data.
-		$data = $model->validate($form, $data);
+		//$data = $model->validate($form, $data);
 
 		// Check for errors.
 		if ($data === false)

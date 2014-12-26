@@ -16,6 +16,7 @@ JHtml::_('behavior.caption');
 // If the page class is defined, add to class as suffix.
 // It will be a separate class if the user starts it with a space
 $tmpl = JURI::base()."templates/filip/";
+$user = JFactory::getUser();
 ?>
 <section id="slider">
 	<div class="container-full"> 		
@@ -49,7 +50,73 @@ $tmpl = JURI::base()."templates/filip/";
 			</div> <!-- /.container -->
 		</div> <!-- /.shadow -->
 	</div> <!-- /.container-full -->
-	</section><!-- /#battles -->    
+	</section><!-- /#battles -->
+	
+	<?php if(!$user->guest){?>
+	<section id="toplisten">
+		<div class="container-full">
+			<div class="shadow">
+				<div class="container">
+					{article 10}<h2>{title}</h2>{introtext}{/article}
+					<div class="slide" id="myCarousel">
+						   <div class="carousel-inner">
+								<div class="item active wrap_ul_video"> 
+									<ul class="list_video">
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_gala_01.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_01.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
+										</li>
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_gala_02.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
+										</li> 
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_gala_02.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4></a>
+										</li>
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_gala_04.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_04.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
+										</li>
+									</ul>
+								</div><!-- wrap_ul_video -->
+								<div class="item wrap_ul_video"> 
+									<ul class="list_video">
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_gala_01.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_01.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
+										</li>
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_gala_02.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt="">  <h4>Thinkin bout You beatbox cover</h4></a>
+										</li> 
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_gala_02.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt="">  <h4>Thinkin bout You beatbox cover</h4></a>
+										</li>
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_gala_04.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_04.jpg" alt="">  <h4>Thinkin bout You beatbox cover</h4></a>
+										</li>
+									</ul>
+								</div><!-- wrap_ul_video -->
+								<div class="item wrap_ul_video"> 
+									<ul class="list_video">
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_big.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_01.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
+										</li>
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_big.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4></a>
+										</li> 
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_big.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
+										</li>
+										<li class="col-xs-6 col-sm-3">
+											<a class="fancybox" href="img/img_big.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_04.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
+										</li>
+									</ul>
+								</div><!-- wrap_ul_video --> 
+							</div><!--carousel-inner-->	
+							<a data-slide="prev" href="#myCarousel" class="carousel-control left">‹</a>
+							<a data-slide="next" href="#myCarousel" class="carousel-control right">›</a>
+						</div>	<!--#myCarousel-->
+				</div> <!-- /.container -->
+			</div> <!-- /.shadow -->
+		</div> <!-- /.container-full -->
+	</section><!-- /#toplisten -->  
+	<?php }?>
 	
 	<section id="udfordre">
 	<div class="udfordre"> 

@@ -11,11 +11,6 @@ defined('_JEXEC') or die;
 
 JHtml::_('behavior.formvalidation');
 ?>
-<style>
-.invalid{
-	border: 1px solid red;
-}
-</style>
 <section class="temp"> 
 	<div class="container">
 		<div class="w_breadcrumb">
@@ -25,7 +20,7 @@ JHtml::_('behavior.formvalidation');
 			<div class="col-sm-3 w_nav_left">
 				<ul class="nav_left">
 					<li class="active"><a href="javascript:void(0)">Register</a></li>
-					<li><a href="<?php echo JRoute::_('index.php?option=com_users&view=reset&Itemid='); ?>">Glemt kodeord</a></li>  
+					<li><a href="<?php echo JRoute::_('index.php?option=com_users&view=reset&Itemid=121'); ?>">Glemt kodeord</a></li>  
 				</ul>
 			</div>
 			
