@@ -2,7 +2,6 @@
 defined('_JEXEC') or die;
 $tmpl = JURI::base()."templates/filip/";
 $user = JFactory::getUser();
-$user = JUser::getInstance($user->id);
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -131,12 +130,12 @@ $user = JUser::getInstance($user->id);
 									</button>
 								</div>
 								<?php if($user->guest){?> 
-								<a href="#" class="btn  btn_login" data-toggle="modal" data-target="#myModal_login" ><i class="fa fa-lock"></i> Forældre Log-ind</a>
+								<a href="javascript:void(0);" class="btn  btn_login" data-toggle="modal" data-target="#myModal_login" ><i class="fa fa-lock"></i> Forældre Log-ind</a>
 								<?php } else {?>
 								<div class="w_user_loged">
-									<div class="w_user"><span class="user_name">Velkommen Rene Hansen</span> <a href="index.php"> Log ud <i class="fa fa-angle-double-right"></i> </a></div>
-									<a href="gallery.php" class="btn btn_fotoalbum">Fotoalbum</a>
-									<a href="minkonto.php" class="btn btn_minkonto">Min konto</a> 						
+									<div class="w_user"><span class="user_name">Velkommen <?php echo $user->firstname.' '.$user->lastname;?></span> <a href="index.php?option=com_users&task=user.logout&return=<?php echo base64_encode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>"> Log ud <i class="fa fa-angle-double-right"></i> </a></div>
+									<a href="index.php?option=com_content&view=article&layout=gallery&id=10&Itemid=123" class="btn btn_fotoalbum">Fotoalbum</a>
+									<a href="index.php?option=com_users&view=profile&Itemid=122" class="btn btn_minkonto">Min konto</a> 						
 								</div>
 								<?php }?>
 							</div> 
@@ -196,11 +195,11 @@ $user = JUser::getInstance($user->id);
 							<h5>Ny bruger</h5>
 							<p>Vil du registere dig som bruger ? </p>
 									<p>Tryk venligst tilmeld.</p>
-							<a href="<?php echo JRoute::_('index.php?option=com_users&view=registration&Itemid='); ?>" class="btn btn_tilmeld">Tilmeld</a>                
+							<a href="<?php echo JRoute::_('index.php?option=com_users&view=registration&Itemid=120'); ?>" class="btn btn_tilmeld">Tilmeld</a>                
 						</div><!--pp_right-->  
 				  </div><!--modal-body-->
 				  <div class="modal-footer">
-					<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset&Itemid='); ?>">Har du glemt dit kodeord, tryk her >> </a>
+					<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset&Itemid=121'); ?>">Har du glemt dit kodeord, tryk her >> </a>
 				  </div>
 				</div><!--modal-content-->
 			  </div><!--modal-dialog-->

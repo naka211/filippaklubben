@@ -127,8 +127,8 @@ class UsersControllerRegistration extends UsersController
 		$requestData = $this->input->post->get('jform', array(), 'array');
 		
 		//T.Trung
-		if(!$requestData){
-			$requestData = array(
+		if(!$data){
+			$data = array(
 				'email1' => JRequest::getVar('email'),
 				'email2' => JRequest::getVar('email'),
 				'username' => JRequest::getVar('email'),
@@ -152,7 +152,7 @@ class UsersControllerRegistration extends UsersController
 			return false;
 		}
 
-		$data	= $model->validate($form, $requestData);
+		//$data	= $model->validate($form, $requestData);
 
 		// Check for validation errors.
 		if ($data === false)

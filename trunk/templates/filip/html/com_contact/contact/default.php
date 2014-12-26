@@ -10,11 +10,6 @@
 defined('_JEXEC') or die;
 JHtml::_('behavior.formvalidation');
 ?>
-<style>
-.invalid{
-	border: 1px solid red;
-}
-</style>
 <section class="temp"> 
     <div class="container">
         <div class="w_breadcrumb">
