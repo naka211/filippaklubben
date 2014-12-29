@@ -21,8 +21,8 @@ $i = 1;
 			<a class="fancybox" href="<?php echo $imageurl;?>" data-fancybox-group="gallery_1" title="<?php echo $item->name;?>"> <img src="<?php echo JURI::base().'thumbnail/timthumb.php?src='.JURI::base().$imageurl.'&q=100&w=215&h=172'; ?>" /> <h4><?php echo $item->name;?></h4> </a>
 		</li>
 		<?php 
+			if(($i==4) && ($i<count($list))) echo '</ul></div><div class="item wrap_ul_video"><ul class="list_video">';
 			$i++;
-			if(($i==4) && ($i<count($list))) echo '</ul><ul class="list_video">';
 		}?>
 	</ul>
 </div><!-- wrap_ul_video -->
