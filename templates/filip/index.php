@@ -12,10 +12,10 @@ $user = JFactory::getUser();
 		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery.min.js']); ?>
 		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery-noconflict.js']); ?>
 		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery-migrate.min.js']); ?>
-		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery-migrate.min.js']); ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo $tmpl;?>css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $tmpl;?>css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $tmpl;?>css/font-awesome.min.css">
+		<link rel="stylesheet" href="<?php echo $tmpl;?>fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 		<link href="<?php echo $tmpl;?>css/jquery.smartmenus.bootstrap.css" rel="stylesheet"> 
 		<link href="<?php echo $tmpl;?>css/ekko-lightbox.css" rel="stylesheet"> 
 		<link rel="stylesheet" type="text/css" href="<?php echo $tmpl;?>css/style.css">
@@ -47,13 +47,6 @@ $user = JFactory::getUser();
 		  })(); 
 		 </script>
 		  <!-- Add fancyBox --> 
-		  <script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-		  <script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/helpers/jquery.fancybox-media.js"></script>
-		  <script type="text/javascript">
-			$(document).ready(function() {
-			  jQuery(".fancybox").fancybox();  
-			}); 
-		  </script>
 		  <script type="text/javascript">
             $(document).ready(function ($) {
                 // delegate calls to data-toggle="lightbox"
