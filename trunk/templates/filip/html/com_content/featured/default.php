@@ -60,54 +60,7 @@ $user = JFactory::getUser();
 					{article 10}<h2>{title}</h2>{introtext}{/article}
 					<div class="slide" id="myCarousel">
 						   <div class="carousel-inner">
-								<div class="item active wrap_ul_video"> 
-									<ul class="list_video">
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_gala_01.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_01.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
-										</li>
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_gala_02.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
-										</li> 
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_gala_02.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4></a>
-										</li>
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_gala_04.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_04.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
-										</li>
-									</ul>
-								</div><!-- wrap_ul_video -->
-								<div class="item wrap_ul_video"> 
-									<ul class="list_video">
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_gala_01.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_01.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
-										</li>
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_gala_02.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt="">  <h4>Thinkin bout You beatbox cover</h4></a>
-										</li> 
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_gala_02.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt="">  <h4>Thinkin bout You beatbox cover</h4></a>
-										</li>
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_gala_04.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_04.jpg" alt="">  <h4>Thinkin bout You beatbox cover</h4></a>
-										</li>
-									</ul>
-								</div><!-- wrap_ul_video -->
-								<div class="item wrap_ul_video"> 
-									<ul class="list_video">
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_big.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_01.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
-										</li>
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_big.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4></a>
-										</li> 
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_big.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_02.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
-										</li>
-										<li class="col-xs-6 col-sm-3">
-											<a class="fancybox" href="img/img_big.jpg" data-fancybox-group="gallery_1" title="Lorem ipsum"> <img src="img/img_gala_04.jpg" alt=""> <h4>Thinkin bout You beatbox cover</h4> </a>
-										</li>
-									</ul>
-								</div><!-- wrap_ul_video --> 
+						   		{module Home banners}
 							</div><!--carousel-inner-->	
 							<a data-slide="prev" href="#myCarousel" class="carousel-control left">‹</a>
 							<a data-slide="next" href="#myCarousel" class="carousel-control right">›</a>
