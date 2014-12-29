@@ -47,6 +47,13 @@ $user = JFactory::getUser();
 		  })(); 
 		 </script>
 		  <!-- Add fancyBox --> 
+		  <script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+			<script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/helpers/jquery.fancybox-media.js"></script>
+			<script type="text/javascript">
+			jQuery(document).ready(function() {
+			  jQuery(".fancybox").fancybox();  
+			}); 
+			</script>
 		  <script type="text/javascript">
             $(document).ready(function ($) {
                 // delegate calls to data-toggle="lightbox"
