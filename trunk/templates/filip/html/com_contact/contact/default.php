@@ -10,6 +10,23 @@
 defined('_JEXEC') or die;
 JHtml::_('behavior.formvalidation');
 ?>
+<?php if(JRequest::getVar("finish")){?>
+<section class="temp"> 
+    <div class="container">
+        <div class="w_breadcrumb">
+			{module Breadcrumbs}
+        </div><!--w_breadcrumb-->
+		
+        <div class="each_row">
+        	 <h3>Kontakt os</h3>
+            <p style="margin-left:10px; margin-top:10px;">Kære kunde, <br>Tak for din henvendelse. Vi vil kontakte dig hurtigst muligt.<br><br>
+			Med venlig hilsen<br>
+			Fritids/junior- og ungdomsklubben Filippa
+			</p>             
+        </div><!-- /.each_row -->
+    </div> <!-- /.container -->
+</section>
+<?php } else {?>
 <section class="temp"> 
     <div class="container">
         <div class="w_breadcrumb">
@@ -60,3 +77,4 @@ JHtml::_('behavior.formvalidation');
         </div><!-- /.each_row -->
     </div> <!-- /.container -->
 </section>
+<?php }?>

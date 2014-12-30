@@ -35,7 +35,7 @@ class UsersControllerReset extends UsersController
 		$data  = $this->input->post->get('jform', array(), 'array');
 
 		// Submit the password reset request.
-		$return	= $model->processResetRequest($data);
+		$return	= $model->processResetRequest($data);;
 
 		// Check for a hard error.
 		if ($return instanceof Exception)
@@ -49,7 +49,7 @@ class UsersControllerReset extends UsersController
 			{
 				$message = JText::_('COM_USERS_RESET_REQUEST_ERROR');
 			}
-
+			
 			// Get the route to the next page.
 			$itemid = UsersHelperRoute::getResetRoute();
 			$itemid = $itemid !== null ? '&Itemid=' . $itemid : '';
@@ -69,6 +69,10 @@ class UsersControllerReset extends UsersController
 
 			// Go back to the request form.
 			$message = JText::sprintf('COM_USERS_RESET_REQUEST_FAILED', $model->getError());
+			//T.Trung
+			echo '<script>alert("'.$message .'");window.history.go(-1);</script>';
+			exit;
+			//T.Trung end
 			$this->setRedirect(JRoute::_($route, false), $message, 'notice');
 			return false;
 		}

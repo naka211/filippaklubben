@@ -6,3 +6,23 @@
 #Fields: datetime	priority clientip	category	message
 2014-12-15T04:40:30+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
 2014-12-26T04:56:46+00:00	INFO ::1	joomlafailure	Username and password do not match or you do not have an account yet.
+2014-12-29T10:40:59+00:00	INFO ::1	joomlafailure	Username and password do not match or you do not have an account yet.
+2014-12-30T03:32:56+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T03:33:34+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T03:52:03+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T04:10:49+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T04:12:44+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T04:13:22+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T07:32:34+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T07:54:03+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T07:54:55+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T08:06:40+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T08:10:40+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T08:21:23+00:00	INFO ::1	joomlafailure	Tom adgangskode ikke tilladt
+2014-12-30T08:25:14+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
+2014-12-30T08:27:05+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
+2014-12-30T08:31:22+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
+2014-12-30T08:33:12+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
+2014-12-30T09:28:40+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
+2014-12-30T09:29:04+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
+2014-12-30T09:29:15+00:00	INFO ::1	joomlafailure	Ugyldig adgangskode

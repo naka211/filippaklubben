@@ -22,7 +22,7 @@ defined('_JEXEC') or die;
 				</ul>
 			</div>
 			<div class="col-sm-9 form_reg">
-				<p>Kære kunde, <br />Din konto er oprettet.<br /><br />
+				<p>Kære kunde, <br />Din konto er blevet aktiveret og et aktiveringslink er blevet sendt til e-mailadressen som du angav. Bemærk at du skal verificere kontoen ved at klikke på verificeringslinket når du modtager e-mailen og derefeter vil en administrator aktivere din konto før du kan logge på.<br /><br />
 				Med venlig hilsen<br />
 				Fritids/junior- og ungdomsklubben Filippa
 				</p>
