@@ -78,6 +78,10 @@ class UsersControllerUser extends UsersController
 			// Login failed !
 			$data['remember'] = (int) $options['remember'];
 			$app->setUserState('users.login.form.data', $data);
+			//T.Trung
+			echo '<script>alert("E-mail eller adgangskode er forkert");window.history.go(-1);</script>';
+			exit;
+			//T.Trung end
 			$app->redirect(JRoute::_('index.php?option=com_users&view=login', false));
 		}
 	}

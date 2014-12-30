@@ -68,7 +68,7 @@ class ContactControllerContact extends JControllerForm
 			return false;
 		}
 
-		$validate = $model->validate($form, $data);
+		/*$validate = $model->validate($form, $data);
 
 		if ($validate === false)
 		{
@@ -95,7 +95,7 @@ class ContactControllerContact extends JControllerForm
 			$this->setRedirect(JRoute::_('index.php?option=com_contact&view=contact&id=' . $stub, false));
 
 			return false;
-		}
+		}*/
 
 		// Validation succeeded, continue with custom handlers
 		$results = $dispatcher->trigger('onValidateContact', array(&$contact, &$data));
@@ -139,7 +139,7 @@ class ContactControllerContact extends JControllerForm
 		}
 		else
 		{
-			$this->setRedirect(JRoute::_('index.php?option=com_contact&view=contact&id=' . $stub, false), $msg);
+			$this->setRedirect(JRoute::_('index.php?option=com_contact&view=contact&id=' . $stub."&finish=1", false), $msg);
 		}
 
 		return true;

@@ -30,10 +30,10 @@ JHtml::_('behavior.formvalidation');
 				<p>For at fuldføre adgangskodenulstillingen, angiv venligst en ny adgangskode.</p>
 				<form action="<?php echo JRoute::_('index.php?option=com_users&task=reset.complete'); ?>" method="post" class="form-validate">
 				<div class="form-group">
-					<input type="text" placeholder="Adgangskode *" class="form-control required" name="jform[password1]">
+					<input type="password" placeholder="Adgangskode *" class="form-control required" name="jform[password1]">
 				</div>
 				<div class="form-group">
-					<input type="text" placeholder="Bekræft adgangskode *" class="form-control required" name="jform[password2]">
+					<input type="password" placeholder="Bekræft adgangskode *" class="form-control required" name="jform[password2]">
 				</div>
 				<button type="submit" class="btn btn_send validate">SEND</button>
 				<?php echo JHtml::_('form.token'); ?>
