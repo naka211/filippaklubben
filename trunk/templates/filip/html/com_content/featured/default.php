@@ -18,6 +18,65 @@ JHtml::_('behavior.caption');
 $tmpl = JURI::base()."templates/filip/";
 $user = JFactory::getUser();
 ?>
+<script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/helpers/jquery.fancybox-media.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  jQuery(".fancybox").fancybox();  
+}); 
+</script>
+
+<script src="<?php echo $tmpl;?>js/ekko-lightbox.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function (jQuery) {
+		// delegate calls to data-toggle="lightbox"
+		jQuery(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
+			event.preventDefault();
+			return jQuery(this).ekkoLightbox({
+				onShown: function() {
+					if (window.console) {
+						return console.log('Checking our the events huh?');
+					}
+				},
+				onNavigate: function(direction, itemIndex) {
+					if (window.console) {
+						return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+					}
+				}
+			});
+		});
+
+		//Programatically call
+		jQuery('#open-youtube').click(function (e) {
+			e.preventDefault();
+			jQuery(this).ekkoLightbox();
+		});
+
+		// navigateTo
+		jQuery(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
+			event.preventDefault();
+			return jQuery(this).ekkoLightbox({
+				onShown: function() {
+
+					var a = this.modal_content.find('.modal-footer a');
+					if(a.length > 0) {
+
+						a.click(function(e) {
+
+							e.preventDefault();
+							this.navigateTo(2);
+
+						}.bind(this));
+
+					}
+
+				}
+			});
+		});
+
+
+	});
+</script>
 <section id="slider">
 	<div class="container-full"> 		
 			<div id="main-slider" class="myCarousel_banner slide">

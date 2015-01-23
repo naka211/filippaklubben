@@ -12,9 +12,9 @@ $params = $this->params;
 
 if ($params->get('show_page_heading', 1))
 { ?>
-	<h1>
+	<!--<h1>
 	<?php echo $this->escape($params->get('page_heading')); ?>
-	</h1>
+	</h1>-->
 <?php
 }
 
@@ -362,6 +362,18 @@ $calCode .= "// ]]>\n";
 $document->addScriptDeclaration($calCode);
 
 ?>
+<section class="temp"> 
+	<div class="container">
+		<div class="w_breadcrumb">
+			{module Breadcrumbs}
+		</div><!--w_breadcrumb-->
+		<div class="each_row">
+			<div class="col-sm-3 w_nav_left"> 
+			</div>
+			
+			<div class="col-sm-9">
+				<h3>{article 19}{title}{/article}</h3>
+				{article 19}{introtext}{/article}<br>
 <div class="dp-container">
 <!--<div class="pull-left event-button"><?php echo JHtml::_('share.twitter', $params); ?></div>
 <div class="pull-left event-button"><?php echo JHtml::_('share.like', $params); ?></div>
@@ -385,7 +397,7 @@ if ($params->get('show_selection', 1) == 1 || $params->get('show_selection', 1) 
 	}?>
 	<dt>
 		<label class="checkbox">
-			<input type="checkbox" name="<?php echo $calendar->id?>" value="<?php echo $value . '" ' . $checked?> onclick="updateDPCalendarFrame(this)"/>
+			<input type="checkbox" name="<?php echo $calendar->id?>" value=<?php echo '"'.$value . '" ' . $checked?> onclick="updateDPCalendarFrame(this)"/>
 			<font color="<?php echo $calendar->color?>">
 				<?php echo str_pad(' ' . $calendar->title, strlen(' ' . $calendar->title) + $calendar->level - 1, '-', STR_PAD_LEFT)?>
 			</font>
@@ -435,6 +447,11 @@ $height = $params->get('popup_height', 500) ? 'height:' . $params->get('popup_he
   	<iframe style="width:99.6%;height:95%;border:none;"></iframe>
 </div>
 </div>
+
+			</div>                  
+		</div><!-- /.each_row -->
+	</div> <!-- /.container -->
+</section>
 
 <?php
 if (!$canAdd)

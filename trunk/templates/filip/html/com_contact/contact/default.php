@@ -34,9 +34,8 @@ JHtml::_('behavior.formvalidation');
         </div><!--w_breadcrumb-->
 		
         <div class="each_row">
-        	 <h3>Kontakt os</h3>
             <div class="col-sm-6 info_kontackt">                
-                 <h4>Fritids/junior og ungdomsklubben Filippa</h4>
+                 <!--<h4>Fritids/junior og ungdomsklubben Filippa</h4>
                  <p>Filippavej 5 1928 Frederiksberg C <br> Telefon: 38 21 10 80<br> E-mail: <a href="mailto:filippa@frederiksberg.dk">filippa@frederiksberg.dk</a></p>
                  <p></p> 
 
@@ -47,8 +46,9 @@ JHtml::_('behavior.formvalidation');
                  <p>Telefon: 38 21 10 80 / 28 98 10 82<br> Telefon: 38 21 10 80<br> E-mail: <a href="mailto:lila02@frederiksberg.dk">lila02@frederiksberg.dk</a></p> 
                  <p>Vi kan kontaktes i dagtimerne mellem kl. 9,00-16,00</p> 
                  <p>Såfremt I skal melde jeres børn fri mv. skal følgende mail benyttes:</p>
-                 <p><a href="mailto:filippa@frederiksberg.dk">filippa@frederiksberg.dk</a></p>
-
+                 <p><a href="mailto:filippa@frederiksberg.dk">filippa@frederiksberg.dk</a></p>-->
+				 {article 8}{introtext}{/article}
+				<img alt="" src="templates/filip/img/filippalogo-orginal.png" class="logo_orginal">
             </div>
             <div class="col-sm-6 form_kontackt">
                 <h4>Kontakt formular</h4>

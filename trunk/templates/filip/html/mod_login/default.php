@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 ?>
 
 <form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-validate">
-	<input class="form-control required validate-email" type="text" name="username" placeholder="Indtast din e-mail">
+	<input class="form-control required" type="text" name="username" placeholder="Indtast din e-mail">
 	<input class="form-control required" type="password" name="password" placeholder="Indtast din adgangskode">
 	<button type="submit" tabindex="0" name="Submit" class="btn btn-primary validate"><?php echo JText::_('JLOGIN') ?></button>
 	<label class="remember">
@@ -34,7 +34,7 @@ defined('_JEXEC') or die;
 		<div id="form-login-username" class="control-group">
 			<div class="controls">
 					<div class="input-prepend">
-						<input id="modlgn-username" type="text" name="username" class="form-control required validate-email" placeholder="Indtast din e-mail" />
+						<input id="modlgn-username" type="text" name="username" class="form-control required" placeholder="Indtast din e-mail" />
 					</div>
 			</div>
 		</div>

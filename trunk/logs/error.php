@@ -26,3 +26,4 @@
 2014-12-30T09:28:40+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
 2014-12-30T09:29:04+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
 2014-12-30T09:29:15+00:00	INFO ::1	joomlafailure	Ugyldig adgangskode
+2015-01-23T04:59:15+00:00	INFO ::1	joomlafailure	Ugyldig adgangskode

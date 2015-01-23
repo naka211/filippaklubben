@@ -24,7 +24,15 @@ $q = 'SELECT name, params FROM #__banners WHERE catid = '.$banenr_catid.' AND st
 $db->setQuery($q);
 $banners = $db->loadObjectList();
 
+$tmpl = JURI::base()."templates/filip/";
 ?>
+<script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/helpers/jquery.fancybox-media.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  jQuery(".fancybox").fancybox();  
+}); 
+</script>
 <section class="temp"> 
 	<div class="container">
 		<div class="w_breadcrumb">

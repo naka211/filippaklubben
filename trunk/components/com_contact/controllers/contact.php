@@ -167,13 +167,13 @@ class ContactControllerContact extends JControllerForm
 
 			// Prepare email body
 			$prefix = JText::sprintf('COM_CONTACT_ENQUIRY_TEXT', JUri::base());
-			$body	= $name . ' <' . $email . '>' . $phone ."\r\n\r\n" . stripslashes($body);
+			$body	= 'Navn: '.$name . "\n\nTelefon: " . $phone . "\n\nE-mail: " . $email ."\n\nBesked: " . stripslashes($body);
 
 			$mail = JFactory::getMailer();
 			$mail->addRecipient($contact->email_to);
 			$mail->addReplyTo(array($email, $name));
 			$mail->setSender(array($mailfrom, $fromname));
-			$mail->setSubject($sitename);
+			$mail->setSubject("Fritids- og juniorklubben Filippa fra kontakt formular");
 			$mail->setBody($body);
 			$sent = $mail->Send();
 
