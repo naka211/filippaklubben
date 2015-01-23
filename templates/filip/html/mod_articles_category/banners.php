@@ -29,7 +29,9 @@ $y = 0;
 					<img src="<?php echo $image->image_intro;?>">
 					<div class="container carousel-caption">
 						<div class="iframe_video_slide">
-							<a href="<?php echo $url->urla;?>" data-toggle="lightbox"><img src="<?php echo $tmpl;?>img/img_video_demo.jpg"></a>
+							<?php if($image->image_fulltext){?>
+							<a href="<?php echo $url->urla;?>" data-toggle="lightbox"><img src="<?php echo $image->image_fulltext;?>"><i class="fa fa-play-circle-o"></i></a>
+							<?php }?>
 						</div>
 						<h1><?php echo $item->title; ?></h1>
 						<?php echo $item->introtext; ?>
@@ -38,7 +40,5 @@ $y = 0;
 			</div>
 		<?php $y++;
 		endforeach; ?>
-	</div>
-	<a class="carousel-control left" href="#main-slider" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-	<a class="carousel-control right" href="#main-slider" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+	</div>	
 </div>

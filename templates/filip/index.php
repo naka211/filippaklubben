@@ -8,6 +8,7 @@ JHTML::_('behavior.formvalidation');
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 	<head>
 		<script src="<?php echo $tmpl;?>js/jquery-1.9.1.min.js"></script>
+		<script src="<?php echo $tmpl;?>js/jquery-migrate-1.2.1.min.js"></script>
 		<meta charset="UTF-8">
 		<jdoc:include type="head" />
 		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery.min.js']); ?>
@@ -31,7 +32,6 @@ JHTML::_('behavior.formvalidation');
 		<script src="<?php echo $tmpl;?>js/custom.js"></script>
 		<script src="<?php echo $tmpl;?>js/parallax.js"></script>
 		<script src="<?php echo $tmpl;?>js/jquery.mixitup.min.js"></script>
-		<script src="<?php echo $tmpl;?>js/ekko-lightbox.js"></script>
 		
 		<script type="text/javascript">
 		  WebFontConfig = {
@@ -48,63 +48,8 @@ JHTML::_('behavior.formvalidation');
 		  })(); 
 		 </script>
 		  <!-- Add fancyBox --> 
-		  <script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-			<script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/helpers/jquery.fancybox-media.js"></script>
-			<script type="text/javascript">
-			jQuery(document).ready(function() {
-			  jQuery(".fancybox").fancybox();  
-			}); 
-			</script>
-		  <script type="text/javascript">
-            $(document).ready(function ($) {
-                // delegate calls to data-toggle="lightbox"
-                $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
-                    event.preventDefault();
-                    return $(this).ekkoLightbox({
-                        onShown: function() {
-                            if (window.console) {
-                                return console.log('Checking our the events huh?');
-                            }
-                        },
-						onNavigate: function(direction, itemIndex) {
-                            if (window.console) {
-                                return console.log('Navigating '+direction+'. Current item: '+itemIndex);
-                            }
-						}
-                    });
-                });
-
-                //Programatically call
-                $('#open-youtube').click(function (e) {
-                    e.preventDefault();
-                    $(this).ekkoLightbox();
-                });
-
-				// navigateTo
-                $(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
-                    event.preventDefault();
-                    return $(this).ekkoLightbox({
-                        onShown: function() {
-
-							var a = this.modal_content.find('.modal-footer a');
-							if(a.length > 0) {
-
-								a.click(function(e) {
-
-									e.preventDefault();
-									this.navigateTo(2);
-
-								}.bind(this));
-
-							}
-
-                        }
-                    });
-                });
-
-
-            });
-        </script>
+		  
+		  
 	
 		<!-- SmartMenus jQuery plugin -->
 		<script type="text/javascript" src="<?php echo $tmpl;?>js/jquery.smartmenus.js"></script>  
@@ -115,11 +60,11 @@ JHTML::_('behavior.formvalidation');
 	<body> 
 		<div id="wrapper">
 			<header id="header">
-				<section id="headnev" class="navbar topnavbar">		
+				<section id="headnev" class="navbar navbar-fixed-top">		
 					<div class="container"> 
 						<div class="top_header">
-							<h3 class="col-sm-6 pull-left h3_logo"><a class="logo" href=""><img src="<?php echo $tmpl;?>img/logo.png"></a></h3> 
-							<h3 class="col-sm-2 pull-right h3_logo_2"><a href="http://www.frederiksberg.dk/" target="_blank" class="logo_right"> <img src="<?php echo $tmpl;?>img/logo_right.jpg"> </a>  </h3>					
+							<h3 class="col-sm-5 pull-left h3_logo"><a class="logo" href=""><img src="<?php echo $tmpl;?>img/logo.png"></a></h3> 
+							<h3 class="col-sm-3 pull-right h3_logo_2"><a href="http://www.frederiksberg.dk/" target="_blank" class="logo_right"> <img src="<?php echo $tmpl;?>img/logo_right.jpg"> </a>  </h3>					
 							
 							<div class="col-sm-4 right_top">
 								<div class="pull-left navbar-header">
@@ -135,6 +80,7 @@ JHTML::_('behavior.formvalidation');
 								<?php } else {?>
 								<div class="w_user_loged">
 									<div class="w_user"><span class="user_name">Velkommen <?php echo $user->firstname.' '.$user->lastname;?></span> <a href="index.php?option=com_users&task=user.logout&return=<?php echo base64_encode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>"> Log ud <i class="fa fa-angle-double-right"></i> </a></div>
+									<a class="btn btn_calendar" href="index.php?option=com_dpcalendar&view=calendar&Itemid=125">Kalender</a>
 									<a href="index.php?option=com_content&view=article&layout=gallery&id=10&Itemid=123" class="btn btn_fotoalbum">Fotoalbum</a>
 									<a href="index.php?option=com_users&view=profile&Itemid=122" class="btn btn_minkonto">Min konto</a> 						
 								</div>
@@ -164,14 +110,12 @@ JHTML::_('behavior.formvalidation');
 			<footer class="container-full">
 				<div class="container">
 					<div class="col-xs-12 col-md-6 copyright">
-						<p> Fritids/junior- og ungdomsklubben Filippa - Filippavej 5 1928 Frederiksberg C <br>Telefon: 38 21 10 80  |  E-mail: <a href="mailto:filippa@frederiksberg.dk"> filippa@frederiksberg.dk </a> </p> 
+						<p> Fritids- junior- og ungdomsklubben FILIPPA - Filippavej 5 - 1928 Frederiksberg C <br>Telefon: 38 21 10 80  -  E-mail: <a href="mailto:filippa@frederiksberg.dk">filippa@frederiksberg.dk </a> </p> 
 					</div> <!--  .copyright --> 			 
 					<div class=" col-xs-12 col-md-3 sticky-sidebar-social w_social_icons"> 
 						<span>FØLG OS PÅ </span>
 						<div class="social-icons">
-							<a href="#" title="følg os på Facebok" class="facebook" target="_blank"><i class="social_icon fa fa-facebook"></i></a> 
-							<a href="#" title="følg os på Goo<h4>Thinkin bout You beatbox cover</h4>gle+" class="googleplus" target="_blank"><i class="social_icon fa fa-googleplus"></i></a>
-							<a href="#" title="følg os på Instagram" class="instagram" target="_blank"><i class="social_icon fa fa-instagram"></i></a>
+							<a href="https://www.facebook.com/groups/164268508339/" title="følg os på Facebok" class="facebook" target="_blank"><i class="social_icon fa fa-facebook"></i></a> 
 						</div> 
 					</div> <!--social-icons-->
 				</div>
@@ -180,6 +124,7 @@ JHTML::_('behavior.formvalidation');
 		
 		
 		<!-- Begin Modal Login -->
+		<?php if($user->guest){?>
 			<div class="modal fade" id="myModal_login" tabindex="-1" role="dialog" aria-hidden="true">
 			  <div class="modal-dialog">
 				<div class="modal-content">
@@ -206,7 +151,7 @@ JHTML::_('behavior.formvalidation');
 			  </div><!--modal-dialog-->
 			</div><!--#myModal_login-->
 			<!--End  Modal Login -->
-			
+			<?php }?>
 			
 		</div><!--#wrapper-->
 	</body>

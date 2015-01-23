@@ -618,7 +618,7 @@
 		<field
 			name="image_intro"
 			type="media"
-			label="COM_CONTENT_FIELD_INTRO_LABEL"
+			label="Image 1"
 			description="COM_CONTENT_FIELD_INTRO_DESC" />
 		<field
 			name="float_intro"
@@ -648,7 +648,7 @@
 		<field
 			name="image_fulltext"
 			type="media"
-			label="COM_CONTENT_FIELD_FULL_LABEL"
+			label="Image 2"
 			description="COM_CONTENT_FIELD_FULL_DESC"/>
 		<field
 			name="float_fulltext"
