@@ -53,6 +53,12 @@ class UsersControllerUser extends UsersController
 		// Get the log in options.
 		$options = array();
 		$options['remember'] = $this->input->getBool('remember', false);
+		//T.Trung
+		if($options['remember']){
+			setcookie("username", $data['username'], time()+3600);
+			setcookie("password", $data['password'], time()+3600);
+		}
+		//T.Trung end
 		$options['return']   = $data['return'];
 
 		// Get the log in credentials.

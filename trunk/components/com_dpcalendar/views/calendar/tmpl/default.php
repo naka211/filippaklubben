@@ -237,6 +237,9 @@ if ($params->get('show_event_as_popup', 1) == 1)
  	$calCode .= "		            url.query.tmpl = 'component';\n";
  	$calCode .= "		            dpjQuery('#dpc-event-view iframe').attr('src', url.toString());\n";
  	$calCode .= "		        });\n";
+	//T.Trung
+	$calCode .= "		        if(dpjQuery('#dpc-event-view').css('display')=='none'){var url = new Url(event.url);url.query.tmpl = 'component';dpjQuery('#dpc-event-view iframe').attr('src', url.toString());}";
+	//T.Trung end
  	$calCode .= "		        dpjQuery('#dpc-event-view').on('hide', function () {\n";
 	if (DPCalendarHelper::isJoomlaVersion('3'))
 	{

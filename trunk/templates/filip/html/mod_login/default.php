@@ -8,14 +8,17 @@
  */
 
 defined('_JEXEC') or die;
+
+$username = JRequest::getString('username','','cookie');
+$password = JRequest::getString('password','','cookie');
 ?>
 
 <form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-validate">
-	<input class="form-control required" type="text" name="username" placeholder="Indtast din e-mail">
-	<input class="form-control required" type="password" name="password" placeholder="Indtast din adgangskode">
+	<input class="form-control required" type="text" name="username" placeholder="Indtast din e-mail" value="<?php echo $username;?>">
+	<input class="form-control required" type="password" name="password" placeholder="Indtast din adgangskode" value="<?php echo $password;?>">
 	<button type="submit" tabindex="0" name="Submit" class="btn btn-primary validate"><?php echo JText::_('JLOGIN') ?></button>
 	<label class="remember">
-		<input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes" />
+		<input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes" <?php if($username) echo 'checked';?> />
 		<span> Husk mig</span> 
 	</label>
 	<input type="hidden" name="option" value="com_users" />

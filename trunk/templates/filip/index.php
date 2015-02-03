@@ -54,7 +54,25 @@ JHTML::_('behavior.formvalidation');
 		<!-- SmartMenus jQuery plugin -->
 		<script type="text/javascript" src="<?php echo $tmpl;?>js/jquery.smartmenus.js"></script>  
 		<script type="text/javascript" src="<?php echo $tmpl;?>js/jquery.smartmenus.bootstrap.js"></script>
-		 
+		 <?php 
+		 if(JRequest::getVar("option") == "com_dpcalendar"){?>
+		 <style>
+		 .modal {
+			background-clip: padding-box;
+			background-color: #fff;
+			border: 1px solid rgba(0, 0, 0, 0.3);
+			border-radius: 6px;
+			box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+			left: 50%;
+			margin-left: -280px;
+			outline: medium none;
+			position: fixed;
+			top: 10%;
+			width: 580px;
+			z-index: 1050;
+		}
+		 </style>
+		 <?php }?>
 	</head>
 
 	<body> 

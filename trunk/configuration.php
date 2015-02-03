@@ -39,7 +39,7 @@ class JConfig {
 	public $smtppass = 'trung1986';
 	public $smtphost = 'smtp.gmail.com';
 	public $smtpsecure = 'tls';
-	public $smtpport = '465';
+	public $smtpport = '25';
 	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '15';

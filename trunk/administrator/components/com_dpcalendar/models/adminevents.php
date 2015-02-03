@@ -69,7 +69,10 @@ class DPCalendarModelAdminEvents extends JModelList
 		// Load the filter state.
 		$search = $this->getUserStateFromRequest($this->context . '.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
-		$search = $this->getUserStateFromRequest($this->context . '.filter.search_start', 'filter_search_start', DPCalendarHelper::getDate()->format('Y-m-d'));
+		//$search = $this->getUserStateFromRequest($this->context . '.filter.search_start', 'filter_search_start', DPCalendarHelper::getDate()->format('Y-m-d'));
+		//T.Trung
+		$search = $this->getUserStateFromRequest($this->context . '.filter.search_start', 'filter_search_start', '2015-01-01');
+		//T.Trung ebd
 		$this->setState('filter.search_start', $search);
 		$search = $this->getUserStateFromRequest($this->context . '.filter.search_end', 'filter_search_end');
 		$this->setState('filter.search_end', $search);
