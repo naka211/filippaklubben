@@ -22,7 +22,7 @@ defined('_JEXEC') or die;
 				</ul>
 			</div>
 			<div class="col-sm-9 form_reg">
-				<p>Kære kunde, <br />Din tilmelding er hermed under behandling<br />Du vil snarest modtage en verficeringsmail når du er aktiveret<br /><br />
+				<p>Brugerens konto er blevet aktiveret og brugeren er blevet underrettet herom.<br /><br />
 				Med venlig hilsen<br />
 				Fritids/junior- og ungdomsklubben Filippa
 				</p>

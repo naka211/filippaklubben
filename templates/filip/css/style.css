@@ -445,20 +445,6 @@ img.logo_orginal {float: left;  margin-bottom: 0 !important; padding: 0; width: 
 .btn_calendar {background: #d52b2b;}
 button.navbar-toggle {margin-right: 2px;}
 
-.modal {
-    background-clip: padding-box;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 6px;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    left: 50%;
-    margin-left: -280px;
-    outline: medium none;
-    position: fixed;
-    top: 10%;
-    width: 580px;
-    z-index: 1050;
-}
   
 /*----------------- CSS -----------------*/
 /*----------------- CSS -----------------*/
