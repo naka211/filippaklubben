@@ -22,7 +22,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, a {	font-family: "PT Sans"; }
 .clear-bottom{	height: 60px;	width: 100%;} 
 img {max-width: 100% !important;	display: block;	height: auto;}
 /*---------------        Bacsic     ---------------*/
-.container h2   {text-align: center;font-family: 'mias_scribblings_regular'; color: #648f14;}
+.container h2   {text-align: center;/*font-family: 'mias_scribblings_regular';*/ color: #648f14;}
 .container h2 b {color: #32363e; font-weight: normal;}
 .container p { text-align: center;}
 .container p img { display: inline-block;}
@@ -293,7 +293,7 @@ ul.list_video li .btn { width: 100%; font-size: 0.9em; }
 #footer .social-icons li a i {	width: 30px;	height: 30px;	font-size: 1.25em;	text-align: center;	padding: 2px;	line-height: 30px;}
 #footer .social-icons li {	margin: 0px 10px 10px 10px;	border-radius: 5px;	background-color: #636666;	float: left;	overflow: hidden;
 	-webkit-transition: background-color .3s;	-moz-transition: background-color .3s;	-o-transition: background-color .3s;	-ms-transition: background-color .3s;	transition: background-color .3s;}
-#footer .social-icons i  {color:  #32363e;}
+.social-icons i  {color:  #32363e;}
 #footer .social-icons a:hover i { }
 #footer .col-md-3 {	overflow: hidden;}
 
@@ -444,6 +444,13 @@ img.logo_orginal {float: left;  margin-bottom: 0 !important; padding: 0; width: 
 .w_user_loged .btn {padding: 2px 9px;  }
 .btn_calendar {background: #d52b2b;}
 button.navbar-toggle {margin-right: 2px;}
+
+.carousel-caption{text-shadow:none;}
+
+@media screen and (min-width: 1100px) { 
+ .top_header h3 .logo_right img {max-width: 90% !important; float: right; padding-top: 5px;}
+ .right_top {padding-right: 0;}
+}
 
   
 /*----------------- CSS -----------------*/

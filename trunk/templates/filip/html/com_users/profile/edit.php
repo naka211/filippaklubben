@@ -26,16 +26,16 @@ JHtml::_('behavior.formvalidation');
 				<h3>Min konto</h3>
 				<form id="member-profile" action="<?php echo JRoute::_('index.php?option=com_users&task=profile.save'); ?>" method="post" class="form-validate" enctype="multipart/form-data">
 				<div class="form-group">
-					<input type="text" value="<?php echo $this->data->email;?>" class="form-control required" name="email">
+					<input type="text" value="<?php echo $this->data->email;?>" class="form-control required" name="email" placeholder="E-mail">
 				</div>
 				<div class="form-group">
-					<input type="text" value="<?php echo $this->data->firstname;?>" class="form-control required" name="firstname">
+					<input type="text" value="<?php echo $this->data->firstname;?>" class="form-control required" name="firstname" placeholder="Fornavn">
 				</div>
 				<div class="form-group">
-					<input type="text" value="<?php echo $this->data->lastname;?>" class="form-control required" name="lastname">
+					<input type="text" value="<?php echo $this->data->lastname;?>" class="form-control required" name="lastname" placeholder="Efternavn">
 				</div>
 				<div class="form-group">
-					<input type="text" value="<?php echo $this->data->phone;?>" class="form-control required" name="phone">
+					<input type="text" value="<?php echo $this->data->phone;?>" class="form-control required" name="phone" placeholder="Telefon">
 				</div>
 				<div class="form-group">
 					<input type="password" placeholder="Kodeord (skal være min 4 tegn)" class="form-control" name="password1">

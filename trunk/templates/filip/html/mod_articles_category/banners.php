@@ -23,11 +23,13 @@ $y = 0;
 			$url = json_decode($item->urls);
 			$active = $y?"":"active";
 		?>
-	
+			
 			<div class="<?php echo $active;?> item">
 				<div class="slide-element">
+					<a href="<?php echo $url->urlb;?>">
 					<img src="<?php echo $image->image_intro;?>">
-					<div class="container carousel-caption">
+					</a>
+					<div class="container carousel-caption" onClick="location.href='<?php echo $url->urlb;?>'" style="cursor:pointer;">
 						<div class="iframe_video_slide">
 							<?php if($image->image_fulltext){?>
 							<a href="<?php echo $url->urla;?>" data-toggle="lightbox"><img src="<?php echo $image->image_fulltext;?>"><i class="fa fa-play-circle-o"></i></a>
