@@ -11,6 +11,25 @@ JHTML::_('behavior.formvalidation');
 		<script src="<?php echo $tmpl;?>js/jquery-migrate-1.2.1.min.js"></script>
 		<meta charset="UTF-8">
 		<jdoc:include type="head" />
+		<?php 
+		if(JRequest::getVar("option") == "com_content" && JRequest::getVar("view") == "article"){
+			$db = JFactory::getDBO();
+			$query = 'SELECT introtext, title, images FROM #__content WHERE id = '.JRequest::getVar('id');	
+			$db->setQuery($query);
+			$article = $db->loadObject();
+			
+			$images  = json_decode($article->images);
+		?>
+		<meta name="productTitle" property="og:title" content="<?php echo $article->title;?>">
+		<?php if($images->image_intro){?>
+		<meta name="productImage" property="og:image" content="<?php echo JURI::base().$images->image_intro;?>">
+		<?php }?>
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="<?php echo JURI::current();?>" />
+		<meta property="og:description" content="<?php echo implode(' ', array_slice(explode(' ', strip_tags($article->introtext)), 0, 30));?>" />
+		<meta property="og:site_name" content="<?php echo $_SERVER['HTTP_HOST'];?>" />
+		<?php }?>
+		
 		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery.min.js']); ?>
 		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery-noconflict.js']); ?>
 		<?php unset($this->_scripts[JURI::root(true).'/media/jui/js/jquery-migrate.min.js']); ?>
@@ -94,7 +113,7 @@ JHTML::_('behavior.formvalidation');
 									</button>
 								</div>
 								<?php if($user->guest){?> 
-								<a href="javascript:void(0);" class="btn  btn_login" data-toggle="modal" data-target="#myModal_login" ><i class="fa fa-lock"></i> Forældre Log-ind</a>
+								<a href="javascript:void(0);" class="btn  btn_login" data-toggle="modal" data-target="#myModal_login" ><i class="fa fa-lock"></i> Login</a>
 								<?php } else {?>
 								<div class="w_user_loged">
 									<div class="w_user"><span class="user_name">Velkommen <?php echo $user->firstname.' '.$user->lastname;?></span> <a href="index.php?option=com_users&task=user.logout&return=<?php echo base64_encode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>"> Log ud <i class="fa fa-angle-double-right"></i> </a></div>
@@ -148,7 +167,7 @@ JHTML::_('behavior.formvalidation');
 				<div class="modal-content">
 				  <div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">  </button>
-					<h4 class="modal-title title-pp">FORÆLDRE LOGIN ELLER OPRET KONTO</h4>         
+					<h4 class="modal-title title-pp">LOGIN ELLER OPRET KONTO</h4>         
 				  </div>
 				  <div class="modal-body w_popup_login"> 
 						<div class="col-sx-6 col-md-6  pp_left">
