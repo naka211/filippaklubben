@@ -136,6 +136,8 @@ class UsersControllerRegistration extends UsersController
 				'firstname' => JRequest::getVar('firstname'),
 				'lastname' => JRequest::getVar('lastname'),
 				'phone' => JRequest::getVar('phone'),
+				'member_name' => JRequest::getVar('member_name'),
+				'member_number' => JRequest::getVar('member_number'),
 				'password1' => JRequest::getVar('password1'),
 				'password2' => JRequest::getVar('password2')
 			);
