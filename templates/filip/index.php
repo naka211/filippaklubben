@@ -92,6 +92,17 @@ JHTML::_('behavior.formvalidation');
 		}
 		 </style>
 		 <?php }?>
+		 
+		 <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-61229890-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
 	</head>
 
 	<body> 
@@ -114,11 +125,16 @@ JHTML::_('behavior.formvalidation');
 								</div>
 								<?php if($user->guest){?> 
 								<a href="javascript:void(0);" class="btn  btn_login" data-toggle="modal" data-target="#myModal_login" ><i class="fa fa-lock"></i> Login</a>
-								<?php } else {?>
+								<?php } else {
+								$app = JFactory::getApplication();
+								$menu = $app->getMenu();
+								$link = $menu->getItem(123)->link;
+								?>
 								<div class="w_user_loged">
 									<div class="w_user"><span class="user_name">Velkommen <?php echo $user->firstname.' '.$user->lastname;?></span> <a href="index.php?option=com_users&task=user.logout&return=<?php echo base64_encode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>"> Log ud <i class="fa fa-angle-double-right"></i> </a></div>
 									<a class="btn btn_calendar" href="index.php?option=com_dpcalendar&view=calendar&Itemid=125">Kalender</a>
-									<a href="index.php?option=com_phocagallery&view=category&id=1&Itemid=123" class="btn btn_fotoalbum">Fotoalbum</a>
+									<a href="<?php echo $link;?>" class="btn btn_fotoalbum">Fotoalbum</a>
+									<!--<a href="index.php?option=com_phocagallery&view=category&id=11&Itemid=123" class="btn btn_fotoalbum">Fotoalbum</a>-->
 									<a href="index.php?option=com_users&view=profile&Itemid=122" class="btn btn_minkonto">Min konto</a> 						
 								</div>
 								<?php }?>
@@ -176,8 +192,7 @@ JHTML::_('behavior.formvalidation');
 						</div><!--pp_left-->                         
 						<div class="col-sx-6 col-md-6  pp_right">
 							<h5>Ny bruger</h5>
-							<p>Vil du registere dig som bruger ? </p>
-									<p>Tryk venligst tilmeld.</p>
+							<p>Tryk på tilmeld for at registrere ny bruger.<br />Som bruger får du adgang til fotoalbum fra diverse ture og arrangementer, samt Filippas kalender.</p>
 							<a href="<?php echo JRoute::_('index.php?option=com_users&view=registration&Itemid=120'); ?>" class="btn btn_tilmeld">Tilmeld</a>                
 						</div><!--pp_right-->  
 				  </div><!--modal-body-->

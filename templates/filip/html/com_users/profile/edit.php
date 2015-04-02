@@ -38,6 +38,12 @@ JHtml::_('behavior.formvalidation');
 					<input type="text" value="<?php echo $this->data->phone;?>" class="form-control required" name="phone" placeholder="Telefon">
 				</div>
 				<div class="form-group">
+					<input type="text" value="<?php echo $this->data->member_name;?>" class="form-control required" name="member_name" placeholder="Medlemmets navn (for- og efternavn)">
+				</div>
+				<div class="form-group">
+					<input type="text" value="<?php echo $this->data->member_number;?>" class="form-control required" name="member_number" placeholder="Medlemsnummer">
+				</div>
+				<div class="form-group">
 					<input type="password" placeholder="Kodeord (skal være min 4 tegn)" class="form-control" name="password1">
 				</div>
 				<div class="form-group">

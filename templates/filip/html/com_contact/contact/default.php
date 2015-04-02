@@ -19,7 +19,7 @@ JHtml::_('behavior.formvalidation');
 		
         <div class="each_row">
         	 <h3>Kontakt os</h3>
-            <p style="margin-left:10px; margin-top:10px;">Kære kunde, <br>Tak for din henvendelse. Vi vil kontakte dig hurtigst muligt.<br><br>
+            <p style="margin-left:10px; margin-top:10px;">Kære <?php echo JRequest::getVar('name');?>, <br>Tak for din henvendelse. Vi vil kontakte dig hurtigst muligt.<br><br>
 			Med venlig hilsen<br>
 			Fritids/junior- og ungdomsklubben Filippa
 			</p>             
