@@ -1,4 +1,50 @@
 <?php 
+defined('_JEXEC') or die;
+
+$db = JFactory::getDBO();
+$user = JFactory::getUser();
+if($user->guest){
+	echo '<script>location.href="'.JURI::base().'"</script>';
+}
+$tmpl = JURI::base()."templates/filip/";
+
+$q = 'SELECT title, id FROM #__phocagallery_categories WHERE published = 1 ORDER BY ordering';
+$db->setQuery($q);
+$cats = $db->loadObjectList();
+?>
+<script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="<?php echo $tmpl;?>fancybox/source/helpers/jquery.fancybox-media.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  jQuery(".fancybox").fancybox();  
+}); 
+</script>
+<section class="temp"> 
+	<div class="container">
+		<div class="w_breadcrumb">
+			{module Breadcrumbs}
+		</div><!--w_breadcrumb-->
+		<div class="each_row">                 
+			<h3>Galleri</h3>
+			<ul class="clearfix listGallery">
+				<?php foreach($cats as $cat){
+					if($cat->id == JRequest::getVar('id')){
+						$active = 'class="item_active"';
+					} else {
+						$active = '';
+					}
+					$link = JRoute::_(JURI::base().'index.php?option=com_phocagallery&view=category&id='.$cat->id.'&Itemid=123');
+				?>
+					<li <?php echo $active;?>><a href="<?php echo $link;?>"><?php echo $cat->title;?></a></li>
+				<?php }?>
+			</ul> 
+
+			<?php echo $this->loadTemplate('images');?>
+			<?php echo $this->loadTemplate('pagination');?>
+		</div><!-- /.each_row -->
+	</div> <!-- /.container -->
+</section>
+<?php return;
 defined('_JEXEC') or die('Restricted access'); 
 echo '<div id="phocagallery" class="pg-category-view'.$this->params->get( 'pageclass_sfx' ).' pg-cv">';
 // Heading

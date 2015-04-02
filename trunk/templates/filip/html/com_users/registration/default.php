@@ -40,6 +40,12 @@ JHtml::_('behavior.formvalidation');
 					<input type="text" placeholder="Telefon *" class="form-control required" name="phone">
 				</div>
 				<div class="form-group">
+					<input type="text" placeholder="Medlemmets navn (for- og efternavn) *" class="form-control required" name="member_name">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Medlemsnummer *" class="form-control required" name="member_number">
+				</div>
+				<div class="form-group">
 					<input type="password" placeholder="Kodeord (skal være min 4 tegn) *" class="form-control required" name="password1">
 				</div>
 				<div class="form-group">

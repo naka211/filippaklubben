@@ -32,3 +32,4 @@
 2015-02-25T09:38:46+00:00	INFO ::1	joomlafailure	Ugyldig adgangskode
 2015-02-25T09:39:27+00:00	INFO ::1	joomlafailure	Ugyldig adgangskode
 2015-03-01T09:57:50+00:00	INFO ::1	joomlafailure	Ugyldig adgangskode
+2015-03-30T08:48:46+00:00	INFO ::1	joomlafailure	Ugyldig adgangskode

@@ -349,7 +349,7 @@ class UsersModelRegistration extends JModelForm
 		{
 			$data[$k] = $v;
 		}
-
+print_r($data);exit;
 		// Prepare the data for the user object.
 		$data['email'] = JStringPunycode::emailToPunycode($data['email1']);
 		$data['password'] = $data['password1'];

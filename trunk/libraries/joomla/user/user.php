@@ -211,6 +211,8 @@ class JUser extends JObject
 	public $firstname = null;
 	public $lastname = null;
 	public $phone = null;
+	public $member_name = null;
+	public $member_number = null;
 
 	/**
 	 * Constructor activating the default information of the language

@@ -43,6 +43,27 @@
 			size="30"
 			validate="email"
 		/>
+		
+		<field name="phone" type="text"
+			description="Phone"
+			label="Phone"
+			required="true"
+			size="30"
+		/>
+		
+		<field name="member_name" type="text"
+			description="Member name"
+			label="Member name"
+			required="true"
+			size="30"
+		/>
+		
+		<field name="member_number" type="text"
+			description="Member number"
+			label="Member number"
+			required="true"
+			size="30"
+		/>
 
 		<field
 			name="registerDate"
