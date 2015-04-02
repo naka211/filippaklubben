@@ -41,7 +41,7 @@ JHtml::_('behavior.formvalidation');
             </div>
             <div class="col-sm-6 form_kontackt">
                 <h4>Kontakt formular</h4>
-                <form role="form" id="contact-form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate form-horizontal">
+                <form role="form" id="contact-form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate">
                       <div class="form-group">
                         <input type="text" placeholder="Navn *" class="form-control required" name="jform[contact_name]">
                       </div>
