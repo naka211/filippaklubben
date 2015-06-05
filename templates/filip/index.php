@@ -125,6 +125,7 @@ JHTML::_('behavior.formvalidation');
 								</div>
 								<?php if($user->guest){?> 
 								<a href="javascript:void(0);" class="btn  btn_login" data-toggle="modal" data-target="#myModal_login" ><i class="fa fa-lock"></i> Login</a>
+								<a class="btn btn_calendar" style="margin-top:20px;" href="index.php?option=com_dpcalendar&view=calendar&Itemid=125">Kalender</a>
 								<?php } else {
 								$app = JFactory::getApplication();
 								$menu = $app->getMenu();
@@ -132,7 +133,6 @@ JHTML::_('behavior.formvalidation');
 								?>
 								<div class="w_user_loged">
 									<div class="w_user"><span class="user_name">Velkommen <?php echo $user->firstname.' '.$user->lastname;?></span> <a href="index.php?option=com_users&task=user.logout&return=<?php echo base64_encode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>"> Log ud <i class="fa fa-angle-double-right"></i> </a></div>
-									<a class="btn btn_calendar" href="index.php?option=com_dpcalendar&view=calendar&Itemid=125">Kalender</a>
 									<a href="<?php echo $link;?>" class="btn btn_fotoalbum">Fotoalbum</a>
 									<!--<a href="index.php?option=com_phocagallery&view=category&id=11&Itemid=123" class="btn btn_fotoalbum">Fotoalbum</a>-->
 									<a href="index.php?option=com_users&view=profile&Itemid=122" class="btn btn_minkonto">Min konto</a> 						
