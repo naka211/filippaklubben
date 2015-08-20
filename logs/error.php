@@ -33,3 +33,9 @@
 2015-02-25T09:39:27+00:00	INFO ::1	joomlafailure	Ugyldig adgangskode
 2015-03-01T09:57:50+00:00	INFO ::1	joomlafailure	Ugyldig adgangskode
 2015-03-30T08:48:46+00:00	INFO ::1	joomlafailure	Ugyldig adgangskode
+2015-06-25T10:15:59+00:00	INFO ::1	joomlafailure	Ugyldig adgangskode
+2015-06-25T10:16:05+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
+2015-06-25T10:16:16+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
+2015-06-25T10:16:54+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
+2015-06-25T11:10:15+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke
+2015-06-25T11:10:32+00:00	INFO ::1	joomlafailure	Bruger eksisterer ikke

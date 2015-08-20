@@ -5,7 +5,7 @@ jQuery(document).ready(function() {
 
   jQuery('.myCarousel_banner').carousel({
       pause: true,
-      interval: false
+      interval: 7000
   });
     
 

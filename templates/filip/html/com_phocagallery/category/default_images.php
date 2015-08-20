@@ -2,7 +2,14 @@
 	<ul class="list_video">
 		<?php foreach($this->items as $item){?>
 		<li class="col-xs-6 col-sm-3">
-			<a class="fancybox" href="<?php echo $item->linkorig;?>" data-fancybox-group="gallery_1" title="<?php echo $item->title;?>"><img src="<?php echo JURI::base().'thumbnail/timthumb.php?src=http://'.$_SERVER['HTTP_HOST'].$item->linkorig.'&q=100&w=215&h=172'; ?>" /><h4><?php echo $item->title;?></h4> </a>
+			<a class="fancybox" href="<?php echo $item->linkorig;?>" data-fancybox-group="gallery_1" title="<?php echo $item->title;?>">
+			<?php if($item->extid){?>
+			<img src="<?php echo $item->linkorig; ?>" />
+			<?php } else {?>
+			<img src="<?php echo JURI::base().'thumbnail/timthumb.php?src=http://'.$_SERVER['HTTP_HOST'].$item->linkorig.'&q=100&w=215&h=172'; ?>" />
+			<?php }?>
+			<h4><?php echo $item->title;?></h4>
+			</a>
 		</li>
 		<?php }?>
 	</ul>

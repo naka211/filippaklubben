@@ -80,11 +80,11 @@ jQuery(document).ready(function() {
 <section id="slider">
 	<div class="container-full"> 		
 			<div id="main-slider" class="myCarousel_banner slide">
-				<ol class="carousel-indicators">
+				<!--<ol class="carousel-indicators">
 					<li data-target="#main-slider" data-slide-to="0" class="active"></li>
 					<li data-target="#main-slider" data-slide-to="1"></li>
 					<li data-target="#main-slider" data-slide-to="2"></li>
-				</ol> <!-- /.carousel-indicators -->
+				</ol>--> <!-- /.carousel-indicators -->
 	
 				<!-- Carousel items -->
 				<div class="carousel-inner">
